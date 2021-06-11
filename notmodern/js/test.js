@@ -1,0 +1,1 @@
+document.getElementById('myplaceholder').innerText = "Hello, World!";
