@@ -18,3 +18,16 @@ console.log(activeJobs);
 
 const inactiveJobs = jobs.filter((job) => !job.isActive);
 console.log(inactiveJobs);
+
+// arrow functions inherit 'this' so you do not need to write
+// var that = this;
+// therefore 'this' is not reset.
+
+const person = {
+    name: "Lisa",
+    talk() {
+        setTimeout(() => console.log("self", this), 1000);
+    }
+}
+
+person.talk();
