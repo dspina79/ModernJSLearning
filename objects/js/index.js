@@ -8,7 +8,11 @@ const person = {
         console.log('hello');
     }
 };
-
+person.walk() // Dave walking
 person.name = "Dean";
 person.talk();
-person.walk();
+person.walk(); // Dean walking
+
+const walk = person.walk.bind(person);
+person.name = "Louis";
+walk(); // Louis walking
