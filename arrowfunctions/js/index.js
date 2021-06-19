@@ -4,6 +4,16 @@ const square = function(number) {
 
 const square2 = (number) => number * number;
 
+const helloWorld = (name) => console.log(`Hello, ${name}!`);
+helloWorld('Dave');
+
+const powerToFour = (number) => square(square(number));
+console.log(powerToFour(2)); // should be 16
+
+// this is perfectly legal
+const powerToFour2 = (number) => number * ((number) => number * number * number)(number);
+console.log(powerToFour2(2));
+
 console.log(square(5));
 console.log(square2(5));
 
@@ -31,3 +41,4 @@ const person = {
 }
 
 person.talk();
+
