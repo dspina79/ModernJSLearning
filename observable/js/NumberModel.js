@@ -8,7 +8,7 @@ class NumberModel {
     increment() {
         this.number++;
         const colors = ['red', 'green', 'orange', 'green', 'blue'];
-        this.color = this.colors[Math.floor(Math.random() * colors.length)];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
         this.notify();
     }
 
