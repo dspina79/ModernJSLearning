@@ -10,10 +10,13 @@
         <hr/>
         <button type="button" onclick="increment();">Increment</button>
         <script src="js/ElementObserver.js"></script>
+        <script src="js/ConsoleObserver.js"></script>
         <script src="js/NumberModel.js"></script>
         <script type="text/javascript">
             const model = new NumberModel();
             const eo1 = new ElementObserver('exampleObserver1');
+            const co = new ConsoleObserver();
+            model.addObserver(co);
             model.addObserver(eo1);
             model.notify();
             function increment(event) {
