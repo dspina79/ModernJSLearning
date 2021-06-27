@@ -8,8 +8,7 @@ class Sentinel {
             counter: 0,
             lastName: 'Dude'
         };
-
-        //Object.freeze(this.stateInformation);
+        
         Object.freeze(this);
         Sentinel.instance = this;
     }
