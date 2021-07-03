@@ -12,11 +12,21 @@ class Animal {
         console.log(`${this.name} says hello.`);
     }
 
+    hideAndSay() {
+        this.#hideAway(); // access private method
+        this.makeSound();
+    }
+
     #hideAway() {
         console.log('this is now a private method...');
+    }
+
+    get #animalType() {
+        return "Animal";
     }
 }
 
 const dog = new Animal('Fido');
 dog.makeSound();
 // can't access hideAway();
+dog.hideAndSay();
